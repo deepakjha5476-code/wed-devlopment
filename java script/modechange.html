@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<button id="btn">change mode</button>
+<script type="text/javascript">
+	let button=document.querySelector('#btn');
+	//save data in local storage
+	//getItem()- if key is found then it returns value otherwise return null value.
+	//setItem()-it is use to set key and value pair in localStorage.
+	let currMode=localStorage.getItem('mode');
+	if(currMode===null){
+	 currMode="light"; //default value set in localStorage which is light
+	 localStorage.setItem('mode', currMode);
+	}
+
+	if(currMode==="dark")
+	{
+		document.body.style.backgroundColor="black";
+	}else{
+		document.body.style.backgroundColor="white";
+	}
+
+	//display in web page
+	button.addEventListener('click',()=>{
+		if(currMode==="light"){
+		 currMode="dark";
+		document.body.style.backgroundColor="black";
+	}else{
+		currMode="light";
+		document.body.style.backgroundColor="white";
+	}
+	localStorage.setItem('mode',currMode);
+});
+</script>
+</body>
+</html>

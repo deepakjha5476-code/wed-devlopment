@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.c1{
+			width: 200px;
+			height: 200px;
+		}
+		.content{
+			width: 100%;
+			height: 100%;
+			position: relative;
+			border: 2px solid black;
+			transition: transform 0.5s;
+			transform-style:preserve-3d;
+	}
+	.c1:hover .content{
+			transform: rotateY(180deg);
+		}
+		.front,.back{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: white;
+			backface-visibility: hidden;
+		}
+		.front{
+			background-color: lightblue;
+		}
+		.back{
+			transform: rotateY(180deg);
+			background-color: lightgreen;
+		}
+		</style>
+</head>
+<body>
+<div class="c1">
+	<div class="content">
+		<div class="front"> front side</div>
+		<div class="back">back side</div>
+	</div>
+</div>
+
+
+</body>
+</html>

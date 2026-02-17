@@ -1,0 +1,68 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		.container{
+			width: 100%;
+			height: 800px;
+			border: 2px solid black;
+			display: flex;
+			flex-direction: colum;
+			/*row
+			colum
+			row-revers
+			colum-revers*/
+			justify-content: flex-start;/*(horinjentli)*/
+			/*1flex-start,2flexspace-around,5space-evenly-end,3space-between,4s*/
+			/*align-items: center;*//*(virtical)*/
+			/*1flex-start,2flex-end*/
+			/*column-gap: 20px;*/
+			/*row-gap,column-gap: ;*/
+			/*flex-wrap: wrap;*/
+			/*norap,*/
+			/*row-gap: 20px;*/
+			gap: 20px;
+
+		}
+		.item{
+			width: 200px;
+			height: 300px;
+			border: 2px solid black;
+		}
+		.box{
+			order: -1 ;
+			flex-shrink: 2;
+			/*flex-grow: 2;*/
+			align-content: center;
+			align-self: flex-end;
+		}
+		.box1{
+			order: 1;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="item">1</div>
+		<div class="item box1">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item box">5</div>
+		<!-- <div class="item">6</div>
+		<div class="item">7</div>
+		<div class="item">8</div>
+		<div class="item">9</div>
+		<div class="item">10</div>
+		<div class="item">11</div>
+		<div class="item">12</div>
+		<div class="item">13</div>
+		<div class="item">14</div>
+		<div class="item">15</div> -->
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<button onclick="creatTable(4,4)">creat table</button>
+	<script type="text/javascript">
+		function creatTable(rows,cols){
+		let tabel=document.createElement('tabel');
+		tabel.style.borderCollapse="Collapse";
+		tabel.style.border="2px solid black";
+		for (let i=0; i<=rows; i++){
+			let tr=document.createElement('tr');
+			for (let j=0;j<=cols;j++){
+				let td=document.createElement('td');
+				td.style.border="2px solid black"
+				td.innerHTML="data";
+				tr.append(td);
+			}
+			tabel.append(tr);
+		}
+		document.body.append(tabel);
+	}
+
+	</script>
+
+</body>
+</html>

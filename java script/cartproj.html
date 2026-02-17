@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" type="text/css" href="cartprojstyle.css">
+</head>
+<body>
+<header>
+	<div class="nav">
+		<i class="fa-solid fa-utensils" style="font-size: 30px;"></i>
+		<a href="#" class="food">Food cart</a>
+	</div>
+	<div class="cart">
+		<i class="fa-solid fa-cart-shopping" style="font-size: 30px;" id="icon"></i>
+		<span style="font-size:30px;">0</span>
+	</div>
+
+	<div class="cart-box">
+		<div class="cart-item">Cart Item</div>
+		 <!-- <div class="cart-content1">
+			<img src="C:\batch130pm\image\food2.webp">
+		<div class="cart-details">
+			<div class="cart-title">bread</div>
+			<div class="cart-price">
+				<div class="price">rs.500</div>
+				<div class="total-amt">rs.500</div>
+			</div>
+			<input type="number" name="" value="1" class="qty">
+		</div>
+		<i class="fa-solid fa-trash remove" style="font-size: 40px; cursor: pointer;"></i>
+	</div>
+ -->
+	<!-- <div class="cart-content1">
+			<img src="C:\batch130pm\image\food2.webp">
+		<div class="cart-details">
+			<div class="cart-title">bread</div>
+			<div class="cart-price">
+				<div class="price">rs.500</div>
+				<div class="total-amt">rs.500</div>
+			</div>
+			<input type="number" name="" value="1" class="qty">
+		</div>
+		<i class="fa-solid fa-trash remove" style="font-size: 40px; cursor: pointer;"></i> 
+	</div> -->
+	<div class="total">
+		<div class="total-price">Rs.1000</div>
+		<i class="fa-solid fa-xmark" id="close" style="position:absolute; top: 0px; right: 0px; font-size: 15px; border: 2px solid black; padding: 20px; border-radius: 50%; cursor: pointer;"></i>
+	</div>
+	</div>
+</header>
+<div class="container">
+	<h1 class="title">Serve Food Serve Love</h1>
+</div>
+<div class="cart-content">
+	<div class="food-box">
+		<div class="image">
+			<img src="C:\batch130pm\image\food1.webp" class="img">
+		</div>
+		<h2 class="food-title">Bread</h2>
+		<h3 class="food-price">Rs. 100</h3>
+		<i class="fa-solid fa-cart-shopping addcart" style="position: absolute; bottom: 0; right: 0; background-color: green; font-size: 50px; padding: 10px; box-sizing: border-box; color: white; border-radius: 5px; cursor: pointer;"></i>
+	</div>
+
+	<div class="food-box">
+		<div class="image">
+			<img src="C:\batch130pm\image\food2.webp" class="img">
+		</div>
+		<h2 class="food-title">special thali</h2>
+		<h3 class="food-price">Rs. 500</h3>
+		<i class="fa-solid fa-cart-shopping addcart" style="position: absolute; bottom: 0; right: 0; background-color: green; font-size: 50px; padding: 10px; box-sizing: border-box; color: white; border-radius: 5px; cursor: pointer;"></i>
+	</div>
+
+	<div class="food-box">
+		<div class="image">
+			<img src="C:\batch130pm\image\food3.jpg" class="img">
+		</div>
+		<h2 class="food-title">samosa</h2>
+		<h3 class="food-price">Rs. 100</h3>
+		<i class="fa-solid fa-cart-shopping addcart" style="position: absolute; bottom: 0; right: 0; background-color: green; font-size: 50px; padding: 10px; box-sizing: border-box; color: white; border-radius: 5px; cursor: pointer;"></i>
+	</div>
+
+	<div class="food-box">
+		<div class="image">
+			<img src="C:\batch130pm\image\food4.jpeg" class="img">
+		</div>
+		<h2 class="food-title">pan cake</h2>
+		<h3 class="food-price">Rs. 300</h3>
+		<i class="fa-solid fa-cart-shopping addcart" style="position: absolute; bottom: 0; right: 0; background-color: green; font-size: 50px; padding: 10px; box-sizing: border-box; color: white; border-radius: 5px; cursor: pointer;"></i>
+	</div>
+
+	<div class="food-box">
+		<div class="image">
+			<img src="C:\batch130pm\image\100.jpg" class="img">
+		</div>
+		<h2 class="food-title">omlete</h2>
+		<h3 class="food-price">Rs. 100</h3>
+		<i class="fa-solid fa-cart-shopping addcart" style="position: absolute; bottom: 0; right: 0; background-color: green; font-size: 50px; padding: 10px; box-sizing: border-box; color: white; border-radius: 5px; cursor: pointer;"></i>
+	</div>
+
+	<div class="food-box">
+		<div class="image">
+			<img src="C:\batch130pm\image\97.jpg" class="img">
+		</div>
+		<h2 class="food-title">plain dosa</h2>
+		<h3 class="food-price">Rs. 50</h3>
+		<i class="fa-solid fa-cart-shopping addcart" style="position: absolute; bottom: 0; right: 0; background-color: green; font-size: 50px; padding: 10px; box-sizing: border-box; color: white; border-radius: 5px; cursor: pointer;"></i>
+	</div>
+
+	<div class="food-box">
+		<div class="image">
+			<img src="C:\batch130pm\image\99.jpg" class="img">
+		</div>
+		<h2 class="food-title">masala dosa</h2>
+		<h3 class="food-price">Rs. 200</h3>
+		<i class="fa-solid fa-cart-shopping addcart" style="position: absolute; bottom: 0; right: 0; background-color: green; font-size: 50px; padding: 10px; box-sizing: border-box; color: white; border-radius: 5px; cursor: pointer;"></i>
+	</div>
+
+	<div class="food-box">
+		<div class="image">
+			<img src="C:\batch130pm\image\98.jpg" class="img">
+		</div>
+		<h2 class="food-title">crispy dosa</h2>
+		<h3 class="food-price">Rs. 150</h3>
+		<i class="fa-solid fa-cart-shopping addcart" style="position: absolute; bottom: 0; right: 0; background-color: green; font-size: 50px; padding: 10px; box-sizing: border-box; color: white; border-radius: 5px; cursor: pointer;"></i>
+	</div>	
+</div>
+
+<script type="text/javascript" src="carindex.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.container{
+			width: 400px;
+			height: 300px;
+			border: 2px solid black;
+			text-align: center;
+			font-size: 30px;
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<p>this is a 1st paragraph</p>
+		<p>this is a 2st paragraph</p>
+		<p>this is a 3st paragraph</p>
+		<p>this is a 4st paragraph</p>
+	</div>
+
+	<script>
+		let div=document.querySelector('.container');
+		// let secondp=div.children[1];
+		// let secondp=div.firstElementChild;
+		let secondp=div.lastElementChild;
+		secondp.style.backgroundColor="red";
+	</script>
+
+</body>
+</html>

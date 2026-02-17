@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</head>
+<body>
+<h1>notification<span class="badge badge-primary text-light bg-dark">3</span></h1>
+<button class="btn btn-info">message<span class="badge badge-primary bg-info">2</span></button>
+
+<table class="table table-striped table-hover w-50 table-bordered table-dark">
+	<tr>
+		<th>name</th>
+		<th>subject</th>
+	</tr>
+	<tr>
+		<td>ram</td>
+		<td>c-lang</td>
+	</tr>
+	<tr>
+		<td>mohan</td>
+		<td>java</td>
+	</tr>
+	<tr>
+		<td>ramesh</td>
+		<td>c++</td>
+	</tr>
+	<tr>
+		<td>radha</td>
+		<td>web</td>
+	</tr>
+</table>
+
+<form class="m-5">
+	<label class="form-label">Name</label>
+	<input type="text" name="" class="form-control w-25">
+	<br>
+	<br>
+	<label class="form-label">age</label>
+	<input type="text" name="" class="form-control w-25">
+
+	<label class="form-label">subject</label>
+	<label class="form-check-lable">c++</label>
+	<input type="checkbox" name="" class="form-check-input">
+
+	<label class="form-label">gender</label>
+	<label class="form-check-lable">Male</label>
+	<input type="radio" name="" class="form-check-input">
+
+	<select class="form-select w-25">
+		<option>java</option>
+		<option>c++</option>
+		<option>c</option>
+	</select>
+</form>
+
+<button class="btn btn-outline-danger" data-bs-target="#mydiv" data-bs-toggle="modal">click me</button>
+<div class="modal fade" id="mydiv">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2 class="modal-title">modal heading</h2>
+				<button class="btn-close" data-bs-dismiss="modal"></button>
+			</div>
+			<div class="modal-body">
+				this is a modal body
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-primary" data-bs-dismiss="modal">close</button>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

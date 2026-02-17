@@ -1,0 +1,131 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		*{
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+			font-family: "Segoe UI",sans-serif;
+		}
+
+		body{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			background: linear-gradient(to right,#2c3e50,#27ae60);
+		}
+		.container{
+			background-color: white;
+			border-radius: 15px;
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+			width: 380px;
+			padding: 30px;
+			text-align: center;
+		}
+		.container h1{
+			color: seagreen;
+			margin-bottom: 25px;
+		}
+
+		.input-box{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 20px;
+		}
+
+		#pass{
+			width: 250px;
+			height: 35px;
+			padding: 5px 10px;
+			border: 1px solid #ccc;
+			border-radius: 8px 0 0 8px;
+			outline: none;
+			font-size: 16px;
+		}
+
+		.copy-icon{
+			width: 40px;
+			height: 35px;
+			background-color: seagreen;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 0 8px 8px 0;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+
+		.copy-icon:hover{
+			background-color: #1e8449;
+		}
+
+		.copy-icon img{
+			width: 20px;
+			height: 20px;
+		}
+
+		button{
+			background-color: seagreen;
+			color: white;
+			border: none;
+			padding: 10px 25px;
+			border-radius: 25px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		button:hover{
+			background-color: #1e8449;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Generate Password</h1>
+		<div class="input-box">
+			<input type="text" id="pass" readonly>
+			<div class="copy-icon" onclick="copy()">
+				<img src="" alt="copy">
+			</div>
+		</div>
+		<button onclick="generatepass()">Generate Password</button>
+	</div>
+
+	<script>
+		const lenght=12;
+		const uppercase="QWERTYUIOPASDFGHJKLZXCVBNM";
+		const lowercase="qwertyuiopasdfghjklzxcvbnm";
+		const number=`1234567890`;
+		const symbol="!@#$%^&*()_+{}:<>,.";
+		const allchar=uppercase+lowercase+symbol+number;
+
+		function generatepass(){
+			let password ="";
+			password+=uppercase[math.floor(math.random()*uppercase.lenght)]
+			password+=lowercase[math.floor(math.random()*lowercase.lenght)]
+			password+=number[math.floor(math.random()*number.lenght)]
+			password+=symbol[math.floor(math.random()*symbol.lenght)]
+
+			while (password.lenght<lenght){
+				password+=allchar[math.floor(math.random()*allchar.lenght)]
+			}
+			document.getElementById(`pass`).value=password;
+		}
+
+		function copy(){
+			const passField=document.getElementsByTag(`pass`);
+			passField.select();
+			passField.setSelectonRange(0,99999);
+			document.execCommand(`copy`);
+			alert("password copied");
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+	  body {
+  		 margin: 0;
+  		 color: white;
+ 		 /*font-family: 'Courier New', monospace;*/
+  		 display: flex;
+  		 justify-content: center;
+  		 align-items: center;
+  		 height: 100vh;
+        }
+
+		.container {
+		  position: relative;
+  		  width: 400px;
+		  height: 400px;
+		  background: #1a1a1a;
+		  border: 2px solid #333;
+		  overflow: hidden;
+		}
+
+		.lamp {
+			 position: absolute;
+			 top: 0;
+			 left: 50%;
+			 transform: translateX(-50%);
+			 text-align: center;
+			 cursor: pointer;
+		}
+
+		.lamp-head {
+			width: 100px;
+			height: 50px;
+			background: #555;
+			clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+			line-height: 50px;
+			font-weight: bold;
+			color: white;
+		}
+		.bulb {
+  			width: 20px;
+  			height: 20px;
+ 			background: #ccc;
+  			border-radius: 50%;
+  			margin: 5px auto;
+  			position: relative;
+ 			z-index: 2;
+        }
+		.light {
+	  		position: absolute;
+	  		top: 50px;
+	  		left: 50%;
+	  		transform: translateX(-50%);
+	  		width: 0;
+	  		height: 0;
+	  		border-left: 200px solid transparent;
+	  		border-right: 200px solid transparent;
+	  		border-top: 300px solid rgba(255, 255, 204, 0); /* Initially OFF */
+	  		z-index: 1;
+	  		transition: border-top-color 0.5s;
+        }
+
+		.login-form {
+			position: absolute;
+		    bottom: 30px;
+			width: 100%;
+			text-align: center;
+			z-index: 3;
+			display: none;
+		}
+
+		.login-form input {
+			display: block;
+			margin: 10px auto;
+		    padding: 8px;
+			background: #000;
+			border: 1px solid #555;
+			color: #0f0;
+		}
+
+		.login-form button {
+			padding: 8px 16px;
+			background: #0f0;
+			border: none;
+			cursor: pointer;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+ <div class="container">
+    <div class="lamp" onclick="toggleLamp()">
+      <div class="lamp-head">LOGIN</div>
+      <div class="bulb"></div>
+      <div class="light" id="light"></div>
+    </div>
+    <div class="login-form" id="loginForm">
+      <input type="text" placeholder="Username" />
+      <input type="password" placeholder="Password" />
+      <button onclick="login()">Login</button>
+    </div>
+  </div>
+
+<script>
+	let lampOn = false;
+
+function toggleLamp() {
+  const light = document.getElementById("light");
+  const loginForm = document.getElementById("loginForm");
+
+  if (!lampOn) {
+    light.style.borderTopColor = "rgba(255, 255, 204, 0.1)";
+    loginForm.style.display = "block";
+    lampOn = true;
+  } else {
+    light.style.borderTopColor = "rgba(255, 255, 204, 0)";
+    loginForm.style.display = "none";
+    lampOn = false;
+  }
+}
+
+function login() {
+  alert("Login button clicked!");
+}
+</script>
+</body>
+</html>

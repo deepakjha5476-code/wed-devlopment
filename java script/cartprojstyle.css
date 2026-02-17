@@ -1,0 +1,100 @@
+
+		body{
+			background-color: darkkhaki;
+		}
+		header{
+			width: 100%;
+			height: 80px;
+			border: 0px solid black;
+			background-color:maroon;
+			color: white;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			border-radius: 50px;
+			font-family: Arial Rounded MT Bold;
+			text-transform: capitalize;
+		}
+		.food{
+			font-size: 40px;
+			text-decoration: none;
+			color: white;
+		}
+		.cart{
+			position: relative;
+		}
+		span{
+			position: absolute;	
+			top: -20px;
+		}
+		img{
+			width: 100%;
+		}
+		.cart-content{
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 20px;
+
+		}
+		.food-box{
+			position: relative;
+			background-color: white;
+			padding: 20px;
+			box-sizing: border-box;
+			border-radius: 20px;	
+		}
+		
+		.food-title{
+			font-size: 30px;
+		}
+		.image{
+			overflow: hidden;
+		}
+
+		.image:hover img{
+			transform: scale(1.5);
+		}
+	   .image img{
+			transition: 0.8s;
+		}
+		.container{
+			text-align: center;
+			color: white;
+		}
+		.cart-box{
+			position: fixed;
+			top: 0px;
+			right: -100%;
+			width: 400px;
+			height: 100%;
+			z-index: 1;
+			background-color: white;
+			padding: 20px;
+			color: black;
+		}
+		.cart-active{
+			right: 0px;
+			transition: 0.8s;
+		}
+
+		.cart-content1{
+			display: grid;
+			grid-template-columns: 30% 40% 30%;
+			grid-gap: 40px;
+			margin-bottom: 50PX;
+		}
+		input{
+			width: 35px;
+		}
+		
+		.cart-item{
+			text-align: center;
+			font-size: 30px;
+			margin-bottom: 50px;
+		}
+		.total{
+			color: black;
+		}
+		.total-price{
+			color: black;
+		}

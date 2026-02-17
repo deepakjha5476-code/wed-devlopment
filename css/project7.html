@@ -1,0 +1,64 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.container{
+			width: 1200;
+			height: 1060px;
+			border: 2px solid black;
+			display: grid;
+			grid-template-columns: repeat(3, 400px);
+			grid-template-rows: 150px 100px 90px 300px 320px 100px;
+
+		}
+		.box{
+			border: 2px solid black;
+			display: grid;
+			place-items: center;
+		}
+		.box1{
+			grid-column-start: 1;
+			grid-column-end: 4;
+		}
+		.box2{
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}
+		.box3{
+			grid-column-start: 3;
+			grid-row-start: 3;
+			grid-row-end: 5;
+		}
+		.box4{
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}
+		@media only screen and (max-width:900px){
+			body{
+				background-color: blue;
+			}
+			@media only screen and (min-width:600px) and (max-width:900px){
+			body{
+				background-color: green;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box box1">header</div>
+		<div class="box box1">nav global</div>
+		<div class="box box2">page title</div>
+		<div class="box box3">nav local</div>
+		<div class="box box4">content1</div>
+		<div class="box">content2</div>
+		<div class="box">content3</div>
+		<div class="box">sidebar</div>
+		<div class="box box1">footer</div>
+	</div>
+
+</body>
+</html>

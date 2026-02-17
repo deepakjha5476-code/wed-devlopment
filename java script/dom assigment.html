@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		#removeMe{
+			width: 200px;
+			height: 200px;
+			border: 2px solid black;
+		}
+	</style>
+</head>
+<body>
+	<div id="removeMe"></div>
+	<ul id="myList">
+		<li>html</li>
+		<li>css</li>
+		<li>js</li>
+	</ul>
+	<div id="container">
+		<p id="p1">paragraph 1</p>
+		<p id="p2">paragraph 2</p>
+		<p id="p3">paragraph 3</p>
+	 </div>
+	 <div class="adbanner"></div>
+	<script type="text/javascript">
+		// 1
+		let h1=document.createElement('h1');
+		h1.innerText="Welcome to DOM World";
+		document.body.append(h1);
+		// 2
+		let div=document.createElement('div');
+		div.style.width="200px";
+		div.style.height="200px";
+		div.style.backgroundColor="blue";
+		div.style.border="2px solid black";
+		document.body.append(div);
+		// 3
+		let p=document.createElement('p');
+		p.innerText="this paragraph is autoinserted";
+		document.body.prepend(p);
+		// 4
+		let span=document.createElement('span');
+		span.innerText="insertedText";
+		document.body.insertBefore(span,p);
+		// 5
+		let p1=document.createElement('p');
+		p1.innerHTML="<i>important message</i>";
+		p1.setAttribute('id',"note");
+		p1.classList.add("highlight");
+		document.body.append(p1);
+		// 6
+		let rem=document.querySelector('#removeMe');
+		rem.remove();
+
+		// 7
+		let ul=document.querySelector('#myList');
+		let firstli=ul.firstElementChild;
+		firstli.remove();
+
+		// 8
+		for(let i=1;i<=5;i++){
+			let h3=document.createElement('h3');
+			h3.innerText=heading ${i};
+			document.body.append(h3);
+		}
+
+		// 9
+		for(let i=1;i<=10;i++){
+			let p=document.createElement('p');
+			p.innerText=line numnber ${i};
+			document.body.append(p);
+		}
+
+		// 10
+		 let color=["red","green","blue","yellow"];
+		 for(let i=0;i<color.length;i++){
+		 	let div=document.createElement('div');
+		 	div.style.width="100px";
+		 	div.style.height="100px";
+		 	div.style.border="2px solid black";
+		 	div.style.backgroundColor=color[i];
+		 	document.body.append(div);
+		 }
+
+		 // 11
+		 let div1=document.querySelector('#container');
+		 let p2=div1.children[1];
+		 p2.style.backgroundColor="lightgray";
+
+		 // 12
+		 let p3=p2.nextElementSibling;
+		 p3.style.fontSize="24px";
+
+		 //13
+		 let c=div1.children.length;
+		 alert(c);
+
+		 // 14
+		 let heading=document.createElement('h1');
+		 heading.innerText="you are browsing in learning mode";
+		 document.body.prepend(heading);
+         
+         // 15
+		 let rem1=document.querySelector('.adbanner');
+		 rem1.remove();
+
+		 // 16
+		 let div2=document.createElement('div');
+		 div2.innerText="Loding...";
+		 div2.style.backgroundColor="yellow";
+		 document.body.append(div2);
+	</script>
+</body>
+</html>

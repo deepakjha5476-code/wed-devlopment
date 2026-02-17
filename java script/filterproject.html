@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+		.container{
+			width: 100%;
+			height: 90px;
+			border: 2px solid black;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+		}
+		.btn{
+			width: 100px;
+			height: 30px;
+			border: none;
+			background-color: lightcoral;
+			color: white;
+		}
+		#search{
+			width: 200px;
+			height: 34px;
+			border: 2px solid lightcoral;
+		}
+		.images{
+			border: 10px solid lightcoral;
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			grid-template-rows:230px 230px 230px;
+			grid-gap: 20px;
+			object-fit: cover;
+
+		}
+		.box{
+			border: 0px solid black;
+			overflow: hidden;
+			margin: 30px;
+			
+		}
+		.box img{
+			object-fit: cover;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div>
+		<button class="btn" data-filter="all">All</button>
+		<button class="btn" data-filter="fruits">Fruits</button>
+		<button class="btn" data-filter="vegetables">Vegetables</button>
+		<button class="btn" data-filter="milk">Milk</button>
+	</div>
+	<input type="text" name="txtitem" id="search">
+</div>
+<div class="images">
+	<div class="box" data-item="fruits"><img src="D:\wed devlopment\image\mango.jpeg"></div>
+	<div class="box" data-item="fruits"><img src="D:\wed devlopment\image\orange.jpeg"></div>
+	<div class="box" data-item="fruits"><img src="D:\wed devlopment\image\apple.jpeg"></div>
+	<div class="box" data-item="fruits"><img src="D:\wed devlopment\image\banana.jpeg"></div>
+	<div class="box" data-item="fruits"><img src="D:\wed devlopment\image\strawberry.jpeg"></div>
+	<div class="box" data-item="vegetables"><img src="C:\batch130pm\image\cabbage.jpg"></div>
+	<div class="box" data-item="vegetables"><img src="C:\batch130pm\image\cucumber.jpg"></div>
+	<div class="box" data-item="vegetables"><img src="C:\batch130pm\image\totmato.jpg"></div>
+	<div class="box" data-item="vegetables"><img src="C:\batch130pm\image\kaddu.jpg"></div>
+	<div class="box" data-item="vegetables"><img src="D:\wed devlopment\image\tomato.jpeg"></div>
+	<div class="box" data-item="milk"><img src="D:\wed devlopment\image\amul milk.jpeg"></div>s
+	<div class="box" data-item="milk"><img src="D:\wed devlopment\image\deshi milk.jpeg"></div>
+	<div class="box" data-item="milk"><img src="D:\wed devlopment\image\organic milk.jpeg"></div>
+	<div class="box" data-item="milk"><img src="D:\wed devlopment\image\origin milk.jpeg"></div>
+	<div class="box" data-item="milk"><img src="D:\wed devlopment\image\toned milk.jpeg"></div>
+</div>
+<script type="text/javascript">
+	let input=document.querySelector('#search');
+	let boxes=document.querySelectorAll('.box');
+	let allbtn=document.querySelectorAll('.btn');
+	input.addEventListener('input',(e)=>{
+		let value=e.target.value.toLowerCase().trim();
+		boxes.forEach(box=>{
+			let data=box.dataset.item;
+			if(data.includes(value)){
+				box.style.display="block";
+			}else{
+				box.style.display="none";
+			}
+		}</script>
+	allbtn.forEach(btn=>{
+		btn.addEventListener('click',()=>{
+			let data=btn.dataset.filter;
+			boxes.forEach(box=>{
+				let item=box.dataset.item;
+				if(item===data || data==="all"){
+					box.style.display="block";
+				}else{
+				box.style.display="none";
+			}
+
+			});
+		});
+	});
+</script>
+</body>
+</html>

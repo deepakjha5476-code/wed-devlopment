@@ -1,0 +1,68 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		body{
+			margin: 0;
+			height: 100vh;
+			background-color: blue;
+		}
+		.cube-container{
+			perspective: 1000px;
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.cube{
+			width: 200px;
+			height: 200px;
+			position: relative;
+			transform-style: preserve-3d;
+			transition: transform 0.3s ease-out;
+		}
+		.face{
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			backface-visibility: hidden;
+		}
+		.face img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.front  { transform: rotate( 0deg) translateZ(100px); }
+		.back   { transform: rotate(180deg) translateZ(100px); }
+		.right  { transform: rotate( 90deg) translateZ(100px); }
+		.left   { transform: rotate(-90deg) translateZ(100px); }
+		.top    { transform: rotate(90deg) translateZ(100px); }
+		.bottom { transform: rotate(-90deg) translateZ(100px); }
+	</style>
+</head>
+<body>
+	<div class="cube-container">
+		<div class="cube">
+			<div class="face front"><img src="D:\wed devlopment\image\cow.jpeg" alt="front"></div>
+			<div class="face back"><img src="D:\wed devlopment\image\cat.jpeg" alt="back"></div>
+			<div class="face right"><img src="D:\wed devlopment\image\tiger.jpeg" alt="right"></div>
+			<div class="face left"><img src="D:\wed devlopment\image\wolf.jpeg" alt="left"></div>
+			<div class="face top"><img src="D:\wed devlopment\image\lion.jpeg" alt="top"></div>
+			<div class="face bottom"><img src="D:\wed devlopment\image\elephant.jpeg" alt="bottom"></div>
+		</div>
+	</div>
+
+	<script>
+		const cub = document.querySelector('.cub');
+		document.addEventListener('mousemove', e =>{
+			const x =(e.clientx - window.innerHTML / 2) / 10;
+			const y = -(e.clientx - window.innerHTML / 2) / 10;
+			cub.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+		});
+	</script>
+</body>
+</html>

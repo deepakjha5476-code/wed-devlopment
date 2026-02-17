@@ -1,0 +1,712 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		* {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+           font-family: Segoe UI, sans-serif;
+        }
+        body {
+          background-color: #0f1f2e;
+          color: #ffffff;
+        }
+
+        /* Navbar */
+        .navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 18px 60px;
+          background: #0b1a28;
+        }
+
+        .logo {
+          font-size: 22px;
+          font-weight: 600;
+        }
+
+        .logo .brand {
+          color: #2fa4ff;
+        }
+        .logo .light {
+          color: #ffffff;
+          font-weight: 400;
+        }
+
+        .nav-links {
+          list-style: none;
+          display: flex;
+          gap: 28px;
+        }
+
+        .nav-links a {
+          text-decoration: none;
+          color: #cfd8e3;
+          font-size: 15px;
+          transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+          color: #2fa4ff;
+        }
+
+        /* Hero */
+        .hero {
+          min-height: calc(100vh - 80px);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          background: linear-gradient(180deg, #2c3e50 0%, #1f2f3f 100%);
+          padding: 40px 20px;
+        }
+
+        .hero-content {
+          max-width: 900px;
+        }
+
+        .hero h1 {
+          font-size: 52px;
+          font-weight: 700;
+          margin-bottom: 20px;
+        }
+
+        .hero p {
+          font-size: 22px;
+          color: #d6dde6;
+          line-height: 1.6;
+          margin-bottom: 40px;
+        }
+
+        /* Buttons */
+        .hero-buttons {
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+        }
+
+        .btn {
+          padding: 14px 28px;
+          border-radius: 4px;
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+          transition: all 0.3s ease;
+        }
+
+        .btn.primary:hover {
+          background-color: #6599c2;
+        }
+
+        .btn.secondary {
+          border: 2px solid #2fa4ff;
+          color: #2fa4ff;
+          background: transparent;
+        }
+
+        .btn.secondary:hover {
+          background-color: #2fa4ff;
+          color: #ffffff;
+        }
+
+		    .c1{
+			width: 45%;
+			height: 300px;
+			border: 2px solid black;
+			text-align: center;
+			/*display: flex;*/
+		}
+		.right {
+  			margin-left: auto;
+  		}
+  		.content{
+  			width: 100%;
+  			height: 800px;
+  			border: 2px solid black;
+  			text-align: center;
+  			display: flex;
+            /*justify-content: center;*/
+            /*align-items: center;*/
+            gap: 30px;
+            /*padding: 40px;*/
+  			/*display: grid;
+            grid-template-columns:repeat(3, 1fr);*/
+  		}
+
+		.c2{
+			width: 350px;
+			height: 300px;
+			border: 2px solid black;
+			border-radius: 12px;
+			/*display: grid;*/
+			grid-template-columns:repeat(3, 1fr);
+			/*display: inline-block;*/
+			/*flex: 1;*/
+            background: #ffffff;
+            /*padding: 30px;          */
+            /*box-shadow: 0 10px 25px rgba(0,0,0,0.08);*/
+            /*text-align: center;*/
+		}
+		.c5{
+			width: 900px;
+			height: 657px;
+			border: 2px solid black;
+			border-radius: 10px;
+			text-align: center;
+			/*place-items:center;*/
+			/*position: static;*/
+			/*top: 100px;*/
+		}
+		.box1{
+			width: 1100px;
+			height: 300px;
+			border: 2px solid black;
+		}
+		.c6{
+			width: 1200px;
+			height: 770px;
+			border: 2px solid black;
+			border-radius: 7px;
+			place-items:center;
+		}
+		.c7{
+			width: 1200px;
+			height: 350px;
+			border: 2px solid black;
+			border-radius: 7px;
+			text-align: left;
+		}
+		.c8{
+			width: 100%;
+			height: 1280px;
+			border: 2px solid black;
+			border-radius: 7px;
+			background: lightskyblue;
+			text-align: center;
+		}
+		.c9{
+			width: 100%;
+			height: 530px;
+			border: 2px solid black;
+			border-radius: 7px;
+			background: greenyellow;
+			text-align: center;
+			justify-content: space-between;
+			place-items:center;
+		}
+		.c11{
+			width: 620px;
+			height: 360px;
+			border: 2px solid black;
+			text-align: center;
+			justify-content: center;
+			/*align-items: center;*/
+		}
+    .services {
+      padding: 60px 20px;
+    }
+    .c12{
+      max-width: 1200px;
+      margin: auto;
+      border: 2px solid black;
+      text-align: center;
+      /*justify-content: space-evenly;*/
+    }
+    .card1 {
+      /*background: #ffffff;*/
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    .card1 h3 {
+      margin-bottom: 15px;
+      /*color: #1f2d3d;*/*/
+    }
+    .card p {
+      color: #555;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+  	.c14{
+			width: 300px;
+			height: 270px;
+			border: 2px solid black;
+			border-radius: 5.4px;
+			text-align: center;
+			display: inline-block;
+			/*justify-content: space-between;*/
+		}
+    .industries {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .industries h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .dk{
+      /*width: 100%;*/
+      /*height: 700px;*/
+      /*border: 2px solid black;*/
+      /*text-align: center;*/
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 70px;
+    }
+		.card{
+			width: 300px;
+			height: 190px;
+			border: 2px solid black;
+      border-radius: 10px;
+      padding: 45px 25px;
+      /*transition: 0.3s;*/
+      /*box-shadow: 0 4px 10px rgba(0,0,0,0.08);*/
+      /*background: #fff;*/
+		}
+    .card span {
+      font-size: 40px;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .kk{
+      width: 100%;
+      height: 700px;
+      border: 2px solid black;
+      text-align: center;
+      background: lightskyblue;
+    }
+    .vision {
+      padding: 60px 0;
+     background: #f5f7fb;
+    }
+    .rk {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      gap: 30px;
+    }
+    
+    .left,
+    .right {
+     flex: 1;
+     padding: 30px;
+     border-radius: 12px;
+     background: #1e3c72;
+     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    .left {
+      background: #1e3c72;
+      color: #ffffff;
+    }
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f6f8;
+    }
+
+    .why-section {
+    padding: 60px 20px;
+    text-align: center;
+    }
+
+    .container {
+    max-width: 1100px;
+    margin: auto;
+    }
+
+    .title {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    }
+
+    .subtitle {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #555;
+    line-height: 1.6;
+    }
+
+    .card-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 30px;
+    }
+
+    .card {
+    width: 370px;
+    height: 320px;
+    background: #fff;
+    border: none;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    }
+
+    .card:hover {
+    transform: translateY(-5px);
+    }
+
+  .card h3 {
+    margin: 15px 0;
+    color: #2c3e50;
+  }
+
+  .card p {
+    color: #666;
+    line-height: 1.6;
+  }
+
+  .icon {
+    font-size: 36px;
+    color: #2a7db8;
+  }
+
+.wide-card {
+    width: 1170px;
+    height: 220px;
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.wide-card h3 {
+    margin: 15px 0;
+    color: #2c3e50;
+}
+
+.wide-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive */
+/* @media (max-width: 900px) {
+    .card-row {
+        grid-template-columns: 1fr;
+    }
+} */
+	</style>
+</head>
+<body>
+	<header class="navbar">
+    <div class="logo">
+      <span class="brand">Findix</span> 
+      <span class="light">Private Limited</span>
+    </div>
+	 <nav>
+      <ul class="nav-links">
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Our Services</a></li>
+        <li><a href="#jobs">Job Seekers</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Where Talent Meets Opportunity</h1>
+      <p>
+        Redefining the way businesses connect with exceptional talent through
+        innovative, data-driven solutions.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#" class="btn primary">Our Services</a>
+        <a href="#" class="btn secondary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+  <section class="vision"></section>
+	<div class="kk">
+		<h1>About Us</h1>
+		<h2>Redefining Talent Acquisition</h2>
+		<h3>Welcome to Findix Private Limited, where we are redefining the way talent meets opportunity. At Findix Private Limited, we understand the pivotal role that the right talent plays in driving organizational success. That's why we have embarked on a mission to connect top-tier talent with innovative companies, fostering growth and prosperity on both sides.
+		<br>
+		<br>
+		Founded by a team of industry veterans, Findix Private Limited brings a fresh approach to recruitment,blending cutting-edge technology with a personalized touch. Our platform harnesses the power of AI-driven matchmaking algorithms to streamline the hiring process, ensuring efficient, precise, and tailored matches.
+		<br>
+		<br>
+		We are more than just a platform; we are your strategic partner in talent acquisition. Our team of dedicated professionals is committed to understanding your unique needs and culture, enabling us to deliver candidates who not only meet the skill requirements but also align with your organization's values and vision.</h2>
+	 </h3>
+    <div class="rk">
+    <div class="c1 left">
+    	<<h2>Our Mission</h2>
+      <span class="icon">◎</span>
+    	<p>"Empowering organizations by connecting them with exceptional talent to drive innovation and growth."<br>
+		  At Findix, we believe that great talent is the foundation of successful organizations. Our mission is to bridge the gap between employers and qualified professionals, creating meaningful connections that foster innovation, drive growth, and shape the future of work.</h3>
+    </div>
+    <div class="c1 right">
+    	<span class="icon">◎</span>
+      <h2>Our Vision</h2>>
+    	<p>"Transforming the future of work through seamless, data-driven talent connections."
+		We envision a world where talent acquisition is no longer a challenge but an opportunity for growth. By leveraging technology and human expertise, we aim to revolutionize how organizations build teams, making the process more efficient, effective, and enjoyable for all stakeholders involved.</p>
+    </div>
+    </div>
+    </div>
+    </section>
+    <br><br>
+    <fieldset>
+      <!-- <fieldset>
+        <section class="mv-wrapper">
+    
+    <div class="card mission">
+      <div class="card-header">
+        <span class="icon">◎</span>
+        <h2>Our Mission</h2>
+      </div>
+      <p class="quote">
+
+    <div class="card vision">
+      <div class="card-header">
+        <span class="icon">◎</span>
+        <h2>Our Vision</h2>
+      </div>
+      <p class="quote">
+        “Transforming the future of work through seamless, data-driven talent
+        connections.”
+      </p>
+      <p> -->
+        We envision a world where talent acquisition is no longer a challenge
+        but an opportunity for growth. By leveraging technology and human
+        expertise, we aim to revolutionize how organizations build teams,
+        making the process more efficient, effective, and enjoyable for all
+        stakeholders involved.
+      </p>
+    </div>
+
+  </section>
+      </fieldset>
+    <section class="why-section">
+    <div class="container">
+        <h2 class="title">Why Choose Us</h2>
+        <p class="subtitle">
+            Choose us for your staffing and recruitment needs because we deliver top talent through a seamless hiring process, customized solutions, and industry expertise, ensuring the right fit for your business success.
+        </p>
+        <div class="card-row">
+            <div class="card">
+                <i class="fas fa-industry icon"></i>
+                <h3>Industry Expertise</h3>
+                <p>
+                    With deep industry knowledge and a vast talent network, we understand your hiring needs and provide customized staffing solutions.
+                </p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-user-tie icon"></i>
+                <h3>Quality Candidates</h3>
+                <p>
+                    Our Quality Candidate Services ensure businesses receive top-tier talent through a rigorous screening, assessment, and selection process.
+                </p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-cogs icon"></i>
+                <h3>End-to-End Recruitment Solutions</h3>
+                <p>
+                    From sourcing and screening to onboarding, we handle the entire hiring process, allowing you to focus on your core business operations.
+                </p>
+            </div>
+        </div>
+
+        <!-- Bottom Wide Card -->
+        <div class="wide-card">
+            <i class="fas fa-arrows-alt icon"></i>
+            <h3>Flexible Staffing Options</h3>
+            <p>
+                Whether you need permanent, contract, or temporary staffing, we offer scalable solutions tailored to your business requirements.
+            </p>
+        </div>
+    </div>
+</section>
+    <section class="services">
+    <div class="c12">
+    	<h1>Our Services</h1>
+    	<h3>Findix Pvt Ltd is a recruitment solutions provider driven by innovation and efficiency. We're passionate about connecting businesses with top-tier talent through a seamless, data-driven approach that removes the guesswork and accelerates the hiring journey.</h3>
+    	<div class="card1">
+    		<h3>Staffing & Recruitment</h3>
+    		<p>Sourcing, screening, & hiring qualified candidates to fill job roles within an organization. The process ensures a businesses have the right talent to meet their operational and strategic goals.</p>
+    	</div>
+    	<div class="card1">
+    		<h3>Executive Search</h3>
+    		<p>Identifying & hiring top-level executives and senior leadership roles.</p>
+    	</div>
+    	<div class="card1">
+    		<h3>Contract Staffing</h3>
+    		<p>Hiring employees on temporary basis for specific project or the duration, providing flexibility & cost-effectiveness for businesses.</p>
+    	</div>
+    	<div cclass="card1">
+    		<h3>Permanent Placement</h3>
+    		<p>Recruiting & hiring full-time employees who become long-term assets to an organization.</p>
+    	</div>
+    	<div class="card1">
+    		<h3>RPO (Recruitment Process Outsourcing)</h3>
+    		<p>We do strategic partnership to manages a company's recruitment process to improve efficiency and cost effective on monthly basis cost.</p>
+    	</div>
+    	<div class="card1">
+    		<h3>Manpower (Skilled / Unskilled)</h3>
+    		<p>Provides skilled and unskilled workers to meet workforce demands across various industries, includes sourcing, screening, arranging interview and onboarding.</p>
+    	</div>
+    </div>
+</section>
+   <br><br>
+   <section class="industries">
+    	 <h2>Industries We Serve</h2>
+    <div class="dk"> 
+    	<div class="card">
+       <span>🏢</span>
+    	 <p>Construction</p>
+    	</div>
+    	<div class="card">
+       <span>🚧</span>
+    	 <p>Engineering</p>
+    	</div>
+    	<div class="card">
+       <span>⛽</span> 
+    	 <p>Oil & Gas</p>
+    	</div>
+    	<div class="card">
+       <span>🏭</span> 
+    	 <p>Industrial Manufacturing</p>
+    	</div>
+    	<div class="card">
+       <span>🏢</span> 
+    	 <p>Facilities Management</p>
+    	</div>
+    	<div class="card">
+       <span>🚚</span>
+    	 <p>PMV & Transportation</p>
+    	</div>
+    	<div class="card">
+       <span>💻</span> 
+    	 <p>Information Technology (IT)</p>
+    	</div>
+    </div>
+  </section>
+    <!-- <br><br> -->
+    <div class="c9">
+    	<h1>Job Seekers</h1>
+    	<h3>Join us in shaping the future of work, one successful placement at a time. Upload your CV to connect with exciting opportunities across industries.</h3>
+    	<div class="c11">
+    		<form>
+    			<label>Full Name</label>
+    			<br>
+    			<input type="text" placeholder="Enter your Full name">
+    			<br><br>
+    			<label>Email Address</label>
+    			<br>
+    			<input type="text" placeholder="Enter your Email">
+    			<br><br>
+    			<label>Phone Number</label>
+    			<br>
+    			<input type="text" placeholder="Enter your Phone Number">
+    			<br><br>
+    			<label >Years of Experience</label>
+    			<br>
+    			<input type="text" placeholder="Select your Experience">
+    			<select>
+    				<option>fresher</option>
+    				<option>2 year</option>
+    				<option>5 year</option>
+    			</select>
+    			<br><br>
+    			<label for="file">Upload CV (PDF, DOC, DOCX)</label>
+    			<br>
+    			<input type="file" name="">
+    			<br><br>
+    			<input type="submit" value="Submit application">
+
+    		</form>
+    	</div>
+    </div>
+    <br>
+    <div class="c8">
+    	<h1>Contact Us</h1>
+    <div class="c7">	
+    	<h1>Get in Touch</h1>
+    	<h2>+91-6202460623</h2>
+    	<h2>+91-6202460623</h2>
+    	<h2>recruiter@findix.in</h2>
+    	<h2>findixpvt@gmail.com</h2>
+    	<h2>Monday - Friday: 9:00 AM - 6:00 PM</h2>
+    	<br>
+    </div>
+    <br>	
+    <div class="c6">
+    	<h1>Send Us a Message</h1>
+    <div class="c5">
+    	<fieldset>
+    	<h1>Contact Form</h1>
+    	</fieldset>
+    	<fieldset>
+    		<h2>Full Name</h2>
+    		<input type="" placeholder="your answer">
+    	</fieldset>
+    	<br>
+    	<fieldset>
+    		<h2>Email</h2>
+    		<input type="" placeholder="your answer">
+    	</fieldset>
+    	<br>
+    	<fieldset>
+    		<h2>Phone Number</h2>
+    		<input type="" placeholder="your answer">
+    	   </fieldset><br>
+    	<fieldset>
+    		<h2>Message</h2>
+    		<input type="" placeholder="your answer">
+    	</fieldset>	
+    	<br><br>
+    	<input type="submit" value="Submit">
+    	<button type="reset">Clear form</button>
+    </div>		
+    </div>
+    </div>
+    <!-- <div>
+    	<footer>
+    		<h2>Findix Private Limited</h1>
+    		<h3>We bridge the gap between exceptional talent and innovative organizations, creating meaningful connections that drive growth and success.</h3>
+    		<h2>Quick Links</h2>
+    		<h3></h3>
+    		<h2>Our Services</h2>
+    		<h2>Newsletter</h2>
+    		<h3>Subscribe to our newsletter for the latest updates on recruitment trends and opportunities</h3>
+    		<input type="text" placeholder="Enter your Email"><br>
+    		<button type="SUBSCRIBE">SUBSCRIBE</button>
+    	</footer>
+    	<h2>© 2025 Findix Private Limited. All Rights Reserved.</h2>
+    </div>
+    </fieldset> -->
+
+
+</body>
+</html>
