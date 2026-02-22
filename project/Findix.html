@@ -15,8 +15,6 @@
           background-color: #0f1f2e;
           color: #ffffff;
         }
-
-        /* Navbar */
         .navbar {
           display: flex;
           justify-content: space-between;
@@ -171,21 +169,7 @@
 			height: 300px;
 			border: 2px solid black;
 		}
-		.c6{
-			width: 1200px;
-			height: 770px;
-			border: 2px solid black;
-			border-radius: 7px;
-			place-items:center;
-		}
-		.c7{
-			width: 1200px;
-			height: 350px;
-			border: 2px solid black;
-			border-radius: 7px;
-			text-align: left;
-		}
-		.c8{
+    .c8{
 			width: 100%;
 			height: 1280px;
 			border: 2px solid black;
@@ -193,26 +177,55 @@
 			background: lightskyblue;
 			text-align: center;
 		}
-		.c9{
-			width: 100%;
-			height: 530px;
+		.c7{
+			width: 1100px;
+			height: 330px;
+			border: none;
+      background: rgba(136, 173, 190, 0.685);
+			border-radius: 7px;
+			text-align: left;
+      margin-left: 110px;
+      padding: 50px 15px;
+		}
+    .c6{
+			width: 1100px;
+			height: 770px;
 			border: 2px solid black;
 			border-radius: 7px;
-			background: greenyellow;
+			place-items:center;
+      margin-left: 110px;
+		}
+		.job{
+			width: 100%;
+			height: 660px;
+			border: none;
+			border-radius: 7px;
+			background: rgb(3, 44, 105);
 			text-align: center;
 			justify-content: space-between;
 			place-items:center;
+      padding: 70px 30px;
 		}
+    .job p {
+      font-size: 19px;
+      /* color: #d6dde6; */
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
 		.c11{
 			width: 620px;
 			height: 360px;
-			border: 2px solid black;
+			border: none;
+      border-radius: 7px;
+      background: rgb(99, 157, 228);
 			text-align: center;
 			justify-content: center;
+      padding: 30px 10px;
 			/*align-items: center;*/
 		}
     .services {
       padding: 60px 20px;
+      background-color: #2a7db8;
     }
     .c12{
       max-width: 1200px;
@@ -270,6 +283,7 @@
 			border: 2px solid black;
       border-radius: 10px;
       padding: 45px 25px;
+      margin-bottom: 20px;
       /*transition: 0.3s;*/
       /*box-shadow: 0 4px 10px rgba(0,0,0,0.08);*/
       /*background: #fff;*/
@@ -406,6 +420,63 @@
     color: #666;
     line-height: 1.6;
 }
+  .footer {
+    width: 100%;
+    height: 400px;
+    background: #1f3a52;
+    color: #fff;
+    padding: 60px 20px;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+  .footer-box h3 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #4da3ff;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  .footer-box ul li {
+    margin-bottom: 10px;
+  }
+  .footer-box ul li a:hover {
+    color: #4da3ff;
+  }
+  .footer-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+  }
+  .footer-box button {
+    width: 100%;
+    padding: 10px;
+    background: #3a84b4;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .footer-bottom {
+    border-top: 1px solid #3b556d;
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+  }
+  .scroll-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #3a84b4;
+    color: #fff;
+    padding: 12px 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 18px;
+}
 	</style>
 </head>
 <body>
@@ -424,8 +495,6 @@
       </ul>
     </nav>
   </header>
-
-  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <h1>Where Talent Meets Opportunity</h1>
@@ -471,15 +540,15 @@
     <section class="mv-wrapper">
     <div class="card mission">
       <div class="card-header">
-        <span class="icon">◎</span>
-        <h2>Our Mission</h2>
+        <!-- <span class="icon">◎</span> -->
+        <h2>◎ Our Mission</h2>
       </div>
       <p class="quote">
 
     <div class="card vision">
       <div class="card-header">
-        <span class="icon">◎</span>
-        <h2>Our Vision</h2>
+        <!-- <span class="icon">◎</span> -->
+        <h2>◎ Our Vision</h2>
       </div>
       <p class="quote">
         “Transforming the future of work through seamless, data-driven talent
@@ -494,7 +563,7 @@
       </p>
     </div>
    </section>
-    <section class="why-section">
+   <section class="why-section">
     <div class="container">
         <h2 class="title">Why Choose Us</h2>
         <p class="subtitle">
@@ -600,10 +669,12 @@
     	</div>
     </div>
   </section>
-    <!-- <br><br> -->
-    <div class="c9">
+    <section class="job">
+    <!-- <div class="c9"> -->
     	<h1>Job Seekers</h1>
-    	<h3>Join us in shaping the future of work, one successful placement at a time. Upload your CV to connect with exciting opportunities across industries.</h3>
+    	<p>Join us in shaping the future of work, one successful placement at a time. Upload your CV to connect with<br>
+        exciting opportunities across industries.
+      </p>
     	<div class="c11">
     		<form>
     			<label>Full Name</label>
@@ -632,11 +703,10 @@
     			<input type="file" name="">
     			<br><br>
     			<input type="submit" value="Submit application">
-
     		</form>
     	</div>
-    </div>
-    <br>
+    <!-- </div> -->
+    </section>
     <div class="c8">
     	<h1>Contact Us</h1>
     <div class="c7">	
@@ -652,48 +722,76 @@
     <div class="c6">
     	<h1>Send Us a Message</h1>
     <div class="c5">
-    	<fieldset>
+    	<div class="Message">
     	<h1>Contact Form</h1>
-    	</fieldset>
-    	<fieldset>
+    	</div>
+    	<div class="Message">
     		<h2>Full Name</h2>
     		<input type="" placeholder="your answer">
-    	</fieldset>
+    	</div>
     	<br>
-    	<fieldset>
+    	<div class="Message">
     		<h2>Email</h2>
     		<input type="" placeholder="your answer">
-    	</fieldset>
+    	</div>
     	<br>
-    	<fieldset>
+    	<div class="Message">
     		<h2>Phone Number</h2>
     		<input type="" placeholder="your answer">
-    	   </fieldset><br>
-    	<fieldset>
+    	</div>
+      <br>
+    	<div class="Message">
     		<h2>Message</h2>
     		<input type="" placeholder="your answer">
-    	</fieldset>	
+    	</div>	
     	<br><br>
     	<input type="submit" value="Submit">
     	<button type="reset">Clear form</button>
     </div>		
     </div>
     </div>
-    <!-- <div>
-    	<footer>
-    		<h2>Findix Private Limited</h1>
-    		<h3>We bridge the gap between exceptional talent and innovative organizations, creating meaningful connections that drive growth and success.</h3>
-    		<h2>Quick Links</h2>
-    		<h3></h3>
-    		<h2>Our Services</h2>
-    		<h2>Newsletter</h2>
-    		<h3>Subscribe to our newsletter for the latest updates on recruitment trends and opportunities</h3>
-    		<input type="text" placeholder="Enter your Email"><br>
-    		<button type="SUBSCRIBE">SUBSCRIBE</button>
-    	</footer>
-    	<h2>© 2025 Findix Private Limited. All Rights Reserved.</h2>
+   <footer class="footer">
+    <div class="container">
+    <div class="footer-box">
+      <h3>Findix Private Limited</h3>
+      <p>
+        We bridge the gap between exceptional talent and innovative 
+        organizations, creating meaningful connections that drive growth 
+        and success.
+      </p>
     </div>
-    </fieldset> -->
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Job Seekers</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-box">
+      <h3>Our Services</h3>
+      <ul>
+        <li>End-to-End Recruitment</li>
+        <li>Executive Search</li>
+        <li>Contract Staffing</li>
+        <li>Talent Consulting</li>
+        <li>Background Verification</li>
+      </ul>
+    </div>
+    <div class="footer-box">
+      <h3>Newsletter</h3>
+      <p>Subscribe to our newsletter for the latest updates on recruitment trends and opportunities.</p>
+      <input type="email" placeholder="Your email address">
+      <button>SUBSCRIBE</button>
+    </div>
+    </div>
+    <div class="footer-bottom">
+     <p>© 2025 Findix Private Limited. All Rights Reserved.</p>
+    </div>
+   <a href="#" class="scroll-top">↑</a>
+  </footer>
 
 
 </body>
